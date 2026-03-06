@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Night</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+background:#141414;
+color:white;
+}
+
+/* NAVBAR */
+
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 40px;
+background:black;
+flex-wrap:wrap;
+}
+
+.logo{
+color:#e50914;
+font-size:26px;
+font-weight:bold;
+}
+
+nav{
+display:flex;
+gap:15px;
+}
+
+nav a{
+text-decoration:none;
+color:#ddd;
+font-size:14px;
+}
+
+nav a:hover{
+color:white;
+}
+
+#search{
+padding:6px;
+border:none;
+border-radius:4px;
+background:#222;
+color:white;
+}
+
+/* BANNER */
+
+.banner{
+height:260px;
+background:
+linear-gradient(to right, rgba(0,0,0,0.8), rgba(0,0,0,0.2)),
+url("image/background.jpg");
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+padding:30px;
+}
+
+/* TULISAN BANNER */
+
+.banner-content{
+max-width:320px;
+}
+
+.banner-content h2{
+font-size:26px;
+margin-bottom:8px;
+}
+
+.banner-content p{
+font-size:14px;
+color:#ddd;
+margin-bottom:12px;
+}
+
+/* MOVIES */
+
+.movies{
+padding:30px;
+}
+
+.movies h2{
+margin-bottom:15px;
+}
+
+/* SLIDER FILM */
+
+.movie-row{
+display:flex;
+gap:15px;
+overflow-x:auto;
+scroll-behavior:smooth;
+padding-bottom:10px;
+}
+
+.movie-row::-webkit-scrollbar{
+display:none;
+}
+
+/* POSTER FILM */
+
+.movie-row img{
+width:180px;
+height:220px;
+object-fit:cover;
+border-radius:15px;
+cursor:pointer;
+flex-shrink:0;
+transition:transform 0.3s, box-shadow 0.3s;
+}
+
+.movie-row img:hover{
+transform:scale(1.05);
+box-shadow:0 10px 25px rgba(0,0,0,0.7);
+}
+
+/* RESPONSIVE HP */
+
+@media (max-width:768px){
+
+.navbar{
+flex-direction:column;
+align-items:flex-start;
+gap:10px;
+}
+
+nav{
+flex-wrap:wrap;
+}
+
+.banner{
+height:220px;
+padding:20px;
+}
+
+.banner-content h2{
+font-size:20px;
+}
+
+.movie-row img{
+width:140px;
+height:200px;
+}
+
+}
+
+/* TAMPILAN WINDOWS */
+
+@media (min-width:1025px){
+
+.banner{
+height:300px;
+}
+
+.banner-content h2{
+font-size:32px;
+}
+
+.movie-row img{
+width:200px;
+height:260px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header class="navbar">
+
+<h1 class="logo">Happy Night</h1>
+
+<nav>
+<a href="#">viral</a>
+<a href="#">sedang tranding</a>
+<a href="#">populer</a>
+<a href="#">My List</a>
+</nav>
+
+<input type="text" id="search" placeholder="Search video...">
+
+</header>
+
+
+<section class="banner">
+<div class="banner-content">
+<h2>video viral tik tok</h2>
+<p>Silakan tonton dan pilih video yang sedang viral di tik tok yang kalian cari</p>
+</div>
+</section>
+
+
+<section class="movies">
+
+<h2>Trending Now</h2>
+
+<div class="movie-row">
+
+<a href="https://uc-share.com/s/eee311f70d634?la=id">
+<img src="image/foto-epstein.jpg" data-title="foto-epstein">
+</a>
+
+<a href="https://uc-share.com/s/6c37cbd657274?la=id">
+<img src="image/aji-perdiansyah.jpg" data-title="aji-perdiansyah">
+</a>
+
+<a href="https://uc-share.com/s/2b53410f0ff94?la=id">
+<img src="image/guru-boti.jpg" data-title="guru-boti">
+</a>
+
+<a href="https://uc-share.com/s/427b2355de504?la=id">
+<img src="image/uin-suska-riau.jpg" data-title="uin-suska-riau">
+</a>
+
+<a href="https://uc-share.com/s/fc025d586b924?la=id">
+<img src="image/hamka-viral.jpg" data-title="hamka-viral">
+</a>
+
+</div>
+
+</section>
+
+
+<section class="movies">
+
+<h2>Popular</h2>
+
+<div class="movie-row">
+
+<a href="https://uc-share.com/s/eee311f70d634?la=id">
+<img src="image/foto-epstein.jpg" data-title="foto-epstein">
+</a>
+
+<a href="https://uc-share.com/s/6c37cbd657274?la=id">
+<img src="image/aji-perdiansyah.jpg" data-title="aji-perdiansyah">
+</a>
+
+<a href="https://uc-share.com/s/2b53410f0ff94?la=id">
+<img src="image/guru-boti.jpg" data-title="guru-boti">
+</a>
+
+<a href="https://uc-share.com/s/427b2355de504?la=id">
+<img src="image/uin-suska-riau.jpg" data-title="uin-suska-riau">
+</a>
+
+<a href="https://uc-share.com/s/fc025d586b924?la=id">
+<img src="image/hamka-viral.jpg" data-title="hamka-viral">
+</a>
+
+</div>
+
+</section>
+
+
+<script>
+
+const search = document.getElementById("search");
+const videos = document.querySelectorAll(".movie-row a");
+
+search.addEventListener("keyup", function(){
+
+let keyword = search.value.toLowerCase();
+
+videos.forEach(function(item){
+
+let title = item.querySelector("img").getAttribute("data-title");
+
+if(title.includes(keyword)){
+item.style.display = "";
+}else{
+item.style.display = "none";
+}
+
+});
+
+});
+
+</script>
+
+</body>
+</html>

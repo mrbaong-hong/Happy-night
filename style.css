@@ -1,0 +1,197 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+background:#141414;
+color:white;
+}
+
+/* NAVBAR */
+
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 40px;
+background:black;
+flex-wrap:wrap;
+}
+
+.logo{
+color:#e50914;
+font-size:26px;
+font-weight:bold;
+}
+
+nav{
+display:flex;
+gap:15px;
+}
+
+nav a{
+text-decoration:none;
+color:#ddd;
+font-size:14px;
+}
+
+nav a:hover{
+color:white;
+}
+
+#search{
+padding:6px;
+border:none;
+border-radius:4px;
+background:#222;
+color:white;
+}
+
+/* BANNER */
+
+.banner{
+height:260px;
+background:
+linear-gradient(to right, rgba(0,0,0,0.8), rgba(0,0,0,0.2)),
+url("image/bacground.jpg");
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+padding:30px;
+}
+
+/* TULISAN BANNER */
+
+.banner-content{
+max-width:320px;
+}
+
+.banner-content h2{
+font-size:26px;
+margin-bottom:8px;
+}
+
+.banner-content p{
+font-size:14px;
+color:#ddd;
+margin-bottom:12px;
+}
+
+/* TOMBOL BANNER */
+
+.banner-buttons{
+display:flex;
+gap:10px;
+}
+
+.banner-buttons button{
+padding:8px 16px;
+border:none;
+border-radius:6px;
+font-weight:bold;
+cursor:pointer;
+}
+
+.play-btn{
+background:white;
+color:black;
+}
+
+.info-btn{
+background:#444;
+color:white;
+}
+
+/* MOVIES */
+
+.movies{
+padding:30px;
+}
+
+.movies h2{
+margin-bottom:15px;
+}
+
+/* SLIDER FILM */
+
+.movie-row{
+display:flex;
+gap:15px;
+overflow-x:auto;
+scroll-behavior:smooth;
+padding-bottom:10px;
+}
+
+.movie-row::-webkit-scrollbar{
+display:none;
+}
+
+/* POSTER FILM */
+
+.movie-row img{
+width:180px;
+height:220px;
+object-fit:cover;
+border-radius:15px;
+cursor:pointer;
+flex-shrink:0;
+transition:transform 0.3s, box-shadow 0.3s;
+}
+
+.movie-row img:hover{
+transform:scale(1.05);
+box-shadow:0 10px 25px rgba(0,0,0,0.7);
+}
+
+/* RESPONSIVE HP */
+
+@media (max-width:768px){
+
+.navbar{
+flex-direction:column;
+align-items:flex-start;
+gap:10px;
+}
+
+nav{
+flex-wrap:wrap;
+}
+
+.banner{
+height:220px;
+padding:20px;
+}
+
+.banner-content h2{
+font-size:20px;
+}
+
+.movie-row img{
+width:140px;
+height:200px;
+}
+
+}
+
+/* TAMPILAN WINDOWS */
+
+@media (min-width:1025px){
+
+.banner{
+height:300px;
+}
+
+.banner-content h2{
+font-size:32px;
+}
+
+.movie-row img{
+width:200px;
+height:260px;
+}
+
+}
