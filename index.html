@@ -45,6 +45,7 @@ nav a{
 text-decoration:none;
 color:#ddd;
 font-size:14px;
+cursor:pointer;
 }
 
 nav a:hover{
@@ -73,8 +74,6 @@ align-items:center;
 padding:30px;
 }
 
-/* TULISAN BANNER */
-
 .banner-content{
 max-width:320px;
 }
@@ -100,8 +99,6 @@ padding:30px;
 margin-bottom:15px;
 }
 
-/* SLIDER FILM */
-
 .movie-row{
 display:flex;
 gap:15px;
@@ -113,8 +110,6 @@ padding-bottom:10px;
 .movie-row::-webkit-scrollbar{
 display:none;
 }
-
-/* POSTER FILM */
 
 .movie-row img{
 width:180px;
@@ -130,8 +125,6 @@ transition:transform 0.3s, box-shadow 0.3s;
 transform:scale(1.05);
 box-shadow:0 10px 25px rgba(0,0,0,0.7);
 }
-
-/* RESPONSIVE HP */
 
 @media (max-width:768px){
 
@@ -161,8 +154,6 @@ height:200px;
 
 }
 
-/* TAMPILAN WINDOWS */
-
 @media (min-width:1025px){
 
 .banner{
@@ -191,10 +182,10 @@ height:260px;
 <h1 class="logo">Happy Night</h1>
 
 <nav>
-<a href="#">viral</a>
-<a href="#">sedang tranding</a>
-<a href="#">populer</a>
-<a href="#">My List</a>
+<a onclick="showCategory('viral')">Viral</a>
+<a onclick="showCategory('trending')">Sedang Trending</a>
+<a onclick="showCategory('popular')">Populer</a>
+<a onclick="showCategory('all')">My List</a>
 </nav>
 
 <input type="text" id="search" placeholder="Search video...">
@@ -210,7 +201,29 @@ height:260px;
 </section>
 
 
-<section class="movies">
+<!-- VIRAL -->
+
+<section class="movies" data-category="viral">
+
+<h2>Viral</h2>
+
+<div class="movie-row">
+
+<a href="https://uc-share.com/s/fc025d586b924?la=id">
+<img src="image/hamka-viral.jpg" data-title="hamka-viral">
+</a>
+<a href="https://uc-share.com/s/cf16ece726314?la=id">
+<img src="image/isi-hp.jpg" data-title="isi-hp">
+</a>
+
+</div>
+
+</section>
+
+
+<!-- TRENDING -->
+
+<section class="movies" data-category="trending">
 
 <h2>Trending Now</h2>
 
@@ -232,16 +245,14 @@ height:260px;
 <img src="image/uin-suska-riau.jpg" data-title="uin-suska-riau">
 </a>
 
-<a href="https://uc-share.com/s/fc025d586b924?la=id">
-<img src="image/hamka-viral.jpg" data-title="hamka-viral">
-</a>
-
 </div>
 
 </section>
 
 
-<section class="movies">
+<!-- POPULAR -->
+
+<section class="movies" data-category="popular">
 
 <h2>Popular</h2>
 
@@ -261,10 +272,6 @@ height:260px;
 
 <a href="https://uc-share.com/s/427b2355de504?la=id">
 <img src="image/uin-suska-riau.jpg" data-title="uin-suska-riau">
-</a>
-
-<a href="https://uc-share.com/s/fc025d586b924?la=id">
-<img src="image/hamka-viral.jpg" data-title="hamka-viral">
 </a>
 
 </div>
@@ -294,6 +301,27 @@ item.style.display = "none";
 });
 
 });
+
+
+function showCategory(category){
+
+const sections = document.querySelectorAll(".movies");
+
+sections.forEach(function(section){
+
+if(category === "all"){
+section.style.display = "block";
+}
+else if(section.dataset.category === category){
+section.style.display = "block";
+}
+else{
+section.style.display = "none";
+}
+
+});
+
+}
 
 </script>
 
