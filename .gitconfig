@@ -3,3 +3,5 @@
 	email = curutaj2610@gmail.com
 [safe]
 	directory = /storage/emulated/0/projeck
+[credential]
+	helper = store
